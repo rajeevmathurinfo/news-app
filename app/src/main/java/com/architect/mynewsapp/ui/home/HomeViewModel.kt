@@ -21,7 +21,6 @@ class HomeViewModel @Inject constructor(
     private val _category = MutableLiveData<String>()
     private val _loading = MutableLiveData<Boolean>()
 
-    // Expose the news as Flow<PagingData<Article>>
     val news: LiveData<PagingData<Article>> = _category.switchMap { category ->
         repository.getTopHeadlines(category)
             .cachedIn(viewModelScope)

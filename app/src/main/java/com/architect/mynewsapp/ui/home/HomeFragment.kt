@@ -36,14 +36,14 @@ class HomeFragment : Fragment() {
         setupRecyclerView()
         observeNews()
         observeLoading()
-        homeViewModel.setCategory("general") // Ensure to set the category to trigger data load
+        homeViewModel.setCategory("general")
 
     }
 
     private fun setupRecyclerView() {
         newsAdapter = NewsPagingAdapter { article ->
             homeViewModel.bookmarkArticle(article)
-            Toast.makeText(requireContext(), "Article bookmarked",Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Article bookmarked", Toast.LENGTH_SHORT).show()
             val intent = Intent(requireContext(), DetailsActivity::class.java)
             intent.putExtra("ARTICLE", article)
             startActivity(intent)
