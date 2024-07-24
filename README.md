@@ -14,6 +14,7 @@ Paging: Efficiently loads and displays large datasets in chunks.
 Hilt: Simplifies dependency injection.
 Room: Provides a local database for storing bookmarked articles.
 Retrofit: Handles network requests to fetch news data.
+
 **Prerequisites**
 Android Studio Arctic Fox or higher
 Kotlin 1.5 or higher
